@@ -1,13 +1,12 @@
-import sub from './sub'
+import m from 'mithril'
+import PostList from './Components/PostList'
 
-class Greeter {
-  constructor(name) {
-    this.name = name
-  }
-  greet() {
-    sub.hello(this.name)
+class Index {
+  view() {
+    return m("div", {}, [
+      m(PostList)
+    ])
   }
 }
 
-const greeter = new Greeter('Takuma')
-greeter.greet()
+m.mount(document.body, Index)
