@@ -1,0 +1,19 @@
+{
+  "name": "info.utatatata.blog.prototype",
+  "version": "1.0.0",
+  "description": "prototype",
+  "main": "index.js",
+  "repository": "https://github.com/utatatata/info.utatatata.blog.prototype.git",
+  "author": "utakuma<utatatata.kuma@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --module-bind 'js=babel-loader' --resolve-extensions .js --mode development --entry ./src --output public/index.bundle.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "babel-loader": "^8.0.0-beta.4",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
