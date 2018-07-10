@@ -1,13 +1,16 @@
 const path = require('path')
 
+const history = require('connect-history-api-fallback')
+const convert = require('koa-connect')
+
 module.exports = {
-    mode: process.env.NODE_ENV || 'production',
+    mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
 
     entry: './src/index.js',
 
     output: {
+        path: path.resolve(__dirname, './public'),
         filename: 'index.bundle.js',
-        path: path.resolve(__dirname, './public')
     },
 
     module: {
@@ -15,12 +18,18 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader'
-                    }
-                ]
+                loader: 'babel-loader'
             }
         ]
-    }
+    },
+}
+
+module.exports.serve = {
+    port: 3000,
+    open: true,
+
+    content: [path.resolve(__dirname, 'public')],
+    add: (app, middleware, options) => {
+        app.use(convert(history()));
+    },
 }

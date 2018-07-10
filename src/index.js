@@ -1,8 +1,14 @@
 import m from 'mithril'
 import Index from './Pages/Index'
 
-m.route(document.body, '/', {
-  '/': Index
-})
+class Home {
+  view() {
+    return m("div", {}, "home")
+  }
+}
 
-m.mount(document.body, Index)
+m.route.prefix('')
+m.route(document.body, '/', {
+  '/': Index,
+  '/Home': Home,
+})

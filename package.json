@@ -7,14 +7,19 @@
   "author": "utakuma<utatatata.kuma@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "release": "NODE_ENV=production webpack"
+    "release": "webpack --mode production",
+    "debug": "webpack --mode development",
+    "serve": "webpack-serve --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.52",
     "@babel/preset-env": "^7.0.0-beta.52",
     "babel-loader": "^8.0.0-beta.4",
+    "connect-history-api-fallback": "^1.5.0",
+    "koa-connect": "^2.0.1",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-serve": "^2.0.2"
   },
   "dependencies": {
     "mithril": "^1.1.6"
