@@ -1,12 +1,8 @@
 import m from 'mithril'
-import PostList from './Components/PostList'
+import Index from './Pages/Index'
 
-class Index {
-  view() {
-    return m("div", {}, [
-      m(PostList)
-    ])
-  }
-}
+m.route(document.body, '/', {
+  '/': Index
+})
 
 m.mount(document.body, Index)
