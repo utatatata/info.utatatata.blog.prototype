@@ -1,8 +1,7 @@
 import Post from '../Models/Post'
 
-const PostListState = [
-  new Post('title1', 'body1'),
-  new Post('title2', 'body2')
-]
+const posts = require('../../tmp/posts.json')
+
+const PostListState = posts.map(Post.fromObj)
 
 export default PostListState

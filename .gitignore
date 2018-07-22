@@ -73,4 +73,7 @@ typings/
 .serverless
 
 # webpack build output
-*.bundle.js
+/public/index.bundle.js
+
+# temporary files
+/tmp

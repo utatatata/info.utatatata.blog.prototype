@@ -3,9 +3,7 @@ import PostList from '../Components/PostList'
 
 class Index {
   view() {
-    return m("div", {}, [
-      m(PostList)
-    ])
+    return m('div', {}, [m(PostList)])
   }
 }
 
