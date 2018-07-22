@@ -17,15 +17,21 @@
     "@babel/preset-env": "^7.0.0-beta.52",
     "babel-loader": "^8.0.0-beta.4",
     "connect-history-api-fallback": "^1.5.0",
+    "css-loader": "^1.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "koa-connect": "^2.0.1",
+    "sass-loader": "^7.0.3",
     "ssg-prototype": "^1.1.1",
+    "style-loader": "^0.21.0",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
     "webpack-serve": "^2.0.2"
   },
   "dependencies": {
-    "mithril": "^1.1.6"
+    "autoprefixer": "^9.0.1",
+    "mithril": "^1.1.6",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6"
   }
 }
