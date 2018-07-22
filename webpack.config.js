@@ -2,6 +2,7 @@ const path = require('path')
 
 const history = require('connect-history-api-fallback')
 const convert = require('koa-connect')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: process.env.WEBPACK_SERVE ? 'development' : 'production',
@@ -10,7 +11,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './public'),
-    filename: 'index.bundle.js',
+    filename: 'index.js',
   },
 
   module: {
@@ -20,8 +21,18 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+      },
     ],
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    }),
+  ],
 }
 
 module.exports.serve = {

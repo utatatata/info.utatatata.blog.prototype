@@ -73,7 +73,7 @@ typings/
 .serverless
 
 # webpack build output
-/public/index.bundle.js
+/public/
 
-# temporary files
-/tmp
+# ssg-prorotype temporary files
+/ssgtmp/

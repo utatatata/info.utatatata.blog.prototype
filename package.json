@@ -9,7 +9,7 @@
   "scripts": {
     "debug": "webpack --mode development",
     "release": "webpack --mode production",
-    "generate": "ssg-prototype generate -o tmp/posts.json",
+    "generate": "ssg-prototype generate -o ssgtmp/posts.json",
     "serve": "webpack-serve --config webpack.config.js"
   },
   "devDependencies": {
@@ -17,6 +17,8 @@
     "@babel/preset-env": "^7.0.0-beta.52",
     "babel-loader": "^8.0.0-beta.4",
     "connect-history-api-fallback": "^1.5.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "koa-connect": "^2.0.1",
     "ssg-prototype": "^1.1.1",
     "webpack": "^4.15.1",
