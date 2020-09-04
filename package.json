@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.0.1",
-    "mithril": "^1.1.6",
+    "mithril": "^1.1.7",
     "node-sass": "^4.9.2",
     "postcss-loader": "^2.1.6"
   }
